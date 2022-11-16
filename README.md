@@ -1,5 +1,5 @@
 <h1 align="center"> Leaderplan </h1>
-<p align="center">One of my first projects. <font color="#fa8e47"><b>!OLD! - 2019</font></b></p>
+<p align="center">One of my first projects. <b style="color:orange">!OLD! - 2019</b></p>
 <br>
 
 <div align="center">
@@ -38,7 +38,7 @@ My first serious and creative coursework in 2019 – desktop app for <b>tasks pl
 
 <br>
 
-<p> <font size="3"><b>«Leaderplan»</b> – lightweight and succinct <b>task scheduler</b> to avoid routine and raise productivity. This software product is intended for the distinct task structuring for the user first. <b>LP</b> lay it all out clearly by giving vivid picture of tasks. It has gathered in itself the features of many necessary tools for proper and structured <b>control of life</b> and it's responsibilities.</font></p>
+<p style="font-size:12pt"><b>«Leaderplan»</b> – lightweight and succinct <b>task scheduler</b> to avoid routine and raise productivity. This software product is intended for the distinct task structuring for the user first. <b>LP</b> lay it all out clearly by giving vivid picture of tasks. It has gathered in itself the features of many necessary tools for proper and structured <b>control of life</b> and it's responsibilities.</p>
 
 <br>
 
@@ -62,7 +62,7 @@ Description.
 
 <br>
 
-<p> <font size="4">– Adding new task</font></p>
+<p style="font-size:15pt">– Adding new task</p>
 
 ![](readme_assets/новая_задача.jpg)
 
