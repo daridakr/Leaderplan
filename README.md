@@ -48,7 +48,7 @@ My first serious and creative coursework in 2019 – desktop app for <b>tasks pl
 
 ## Relevance
 
-Description.
+Self-isolation and quarantine alongside the drastic change of established daily routine has resulted in ignorance and messiness of business and task planning. The pace of life today has increased so much that keeping everything in one head is almost impossible. Excluding current circumstances this application doesn't lose its usefulness. For a person working in any company it's necessary to keep track of his business and make sure not to miss out anything, as an example. In fact every omission can be fraught with financial cost.
 
 <br>
 
@@ -60,6 +60,8 @@ Description.
 ## Resolving
 Description.
 
+<br>
+<br>
 <br>
 
 <p style="font-size:15pt">– Adding new task</p>
