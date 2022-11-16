@@ -3,9 +3,9 @@
 <br>
 
 <div align="center">
-<img height="20" width="60" src="readme_assets/win.jpg" />⠀
+<b>Winforms</b>⠀,⠀
 <a href="https://bunifuframework.com/">
-<img height="20" width="60" src="readme_assets/bunifu.jpg" />
+<img height="20" width="55" src="readme_assets/bunifu.jpg" />
 </a>
 </div>
 
@@ -38,7 +38,7 @@ My first serious and creative coursework in 2019 – desktop app for <b>tasks pl
 
 <br>
 
-### **«Leaderplan»** - lightweight and succinct **task scheduler** to avoid routine and raise productivity. This software product is intended for the distinct task structuring for the user first. **LP** lay it all out clearly by giving vivid picture of tasks. It has gathered in itself the features of many necessary tools for proper and structured **control of life** and it's responsibilities. 
+<p> <font size="3"><b>«Leaderplan»</b> – lightweight and succinct <b>task scheduler</b> to avoid routine and raise productivity. This software product is intended for the distinct task structuring for the user first. <b>LP</b> lay it all out clearly by giving vivid picture of tasks. It has gathered in itself the features of many necessary tools for proper and structured <b>control of life</b> and it's responsibilities.</font></p>
 
 <br>
 
@@ -62,7 +62,7 @@ Description.
 
 <br>
 
-### Adding new task
+<p> <font size="4">– Adding new task</font></p>
 
 ![](readme_assets/новая_задача.jpg)
 
