@@ -1,5 +1,5 @@
 <h1 align="center"> Leaderplan </h1>
-<p align="center">One of my first projects. <b style="color:orange">!OLD! - 2019</b></p>
+<p align="center"> One of my first projects. <span style="color:orange"><b>!OLD! - 2019</b></span></p>
 <br>
 
 <div align="center">
