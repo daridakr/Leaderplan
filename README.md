@@ -48,9 +48,7 @@ My first serious and creative coursework in 2019 – desktop app for <b>tasks pl
 
 ## Relevance
 
-Self-isolation and quarantine alongside the drastic change of established daily routine has resulted in `ignorance and messiness of business and task planning`. The pace of life today has increased so much that keeping everything in one head is almost impossible.
-
-Excluding current circumstances this application doesn't lose its usefulness. For a person working in any company it's necessary to `keep track of his business` and make sure not to miss out anything, as an example. In fact every omission can be fraught with financial cost.
+Self-isolation and quarantine alongside the drastic change of established daily routine has resulted in **ignorance and messiness** of business and task planning. The pace of life today has increased so much that keeping everything in one head is almost impossible. Excluding current circumstances this application doesn't lose its usefulness. For a person working in any company it's necessary to `keep track of his business` and make sure not to miss out anything, as an example. In fact every omission can be fraught with financial cost.
 
 <br>
 
@@ -63,7 +61,7 @@ Excluding current circumstances this application doesn't lose its usefulness. Fo
 <br>
 
 ## Resolving
-Следуя уже проверенной системе «Канбан», для пользователя было выделено три группы группы задач, благодаря чему можно видеть состояние своих задач на данный момент времени. Вы можете ориентироваться на кол-во ваших дел на сегодня и кол-во всех дел вкупе с учетом ваших потребностей и свободного времени, определяя примерную загруженность текущего дня. Воспользуйтесь "уровнем важности задач" для удобной сортировки задач. Добавьте описание задачи или установите дедлайн, если это необходимо.
+Following already proven **Kanban system**, three groups of tasks were provided for the user. That will enable view the state of all tasks at a given time. You can be guided by number of your tasks for today and number of all tasks in the total tailored to your needs and free time so you can determine the task load of current day. Use `importance level of task` for easy task sorting. Add a task description or set a deadline if it's needed. 
 
 <br>
 
@@ -72,7 +70,8 @@ Excluding current circumstances this application doesn't lose its usefulness. Fo
 
 <br>
 
-Изучив и анализировав всю информацию о потребностях пользователя, удалось четко определить, что именно в данном приложении необходимо собрать для грамотной организации задач. Главной опорой и фундаментом разработки являлось обеспечение пользователя свободой в своих действиях, а также самостоятельностью, предоставив ему все необходимое для комфортного планирования дел. Здесь нет жесткой привязки к определению «дела» пользователя. Это дает возможность добавления и создания списков, состоящих из чего угодно. Например, список покупок, список фильмов, список книг, проекты и идеи...
+## Conclusion
+Having studied and analyzed all the information about the user's needs, it was possible to clearly determine what exactly in this application should be gathered for proper tasks organization. **The main pillar** and **foundation** of the development was providing the user with **free of actions** and allowing to use his discretion by giving him everything necessary for the best planning and task organization. There is no tight binding to `user task` definition. This makes it possible to adding and creating lists/schedule consisting of **whatever you want**. For example, `shopping list`, `movies list`, `book list`, `projects and ideas`...
 
 <br>
 
