@@ -9,24 +9,15 @@ namespace leaderplan {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Сводка для refForm
-	/// </summary>
 	public ref class refForm : public System::Windows::Forms::Form
 	{
 	public:
 		refForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Освободить все используемые ресурсы.
-		/// </summary>
 		~refForm()
 		{
 			if (components)
@@ -34,30 +25,24 @@ namespace leaderplan {
 				delete components;
 			}
 		}
-	private: Bunifu::Framework::UI::BunifuElipse^ bunifuElipse1;
-	protected:
-
-	private: System::Windows::Forms::Panel^ topPanel;
-	private: Bunifu::Framework::UI::BunifuCustomLabel^ refLabel;
-	private: System::Windows::Forms::PictureBox^ refIcon;
-
-
-	private: System::Windows::Forms::PictureBox^ closeWindow;
-	private: Bunifu::Framework::UI::BunifuDragControl^ moverByText;
-	private: Bunifu::Framework::UI::BunifuDragControl^ moverByPanel;
-	private: System::ComponentModel::IContainer^ components;
 
 	private:
-		/// <summary>
-		/// Обязательная переменная конструктора.
-		/// </summary>
+		System::Windows::Forms::Panel^ topPanel;
+		System::Windows::Forms::PictureBox^ refIcon;
+		System::Windows::Forms::PictureBox^ closeWindow;
+		System::ComponentModel::IContainer^ components;
+		Bunifu::Framework::UI::BunifuElipse^ bunifuElipse1;
+		Bunifu::Framework::UI::BunifuCustomLabel^ refLabel;
+		Bunifu::Framework::UI::BunifuDragControl^ moverByText;
+		Bunifu::Framework::UI::BunifuDragControl^ moverByPanel;
 
+	private: System::Void closeWindow_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		refForm::Close();
+	}
 
+	private:
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
-		/// </summary>
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
@@ -125,7 +110,7 @@ namespace leaderplan {
 			this->refLabel->Name = L"refLabel";
 			this->refLabel->Size = System::Drawing::Size(75, 20);
 			this->refLabel->TabIndex = 13;
-			this->refLabel->Text = L"Справка";
+			this->refLabel->Text = L"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 			// 
 			// moverByText
 			// 
@@ -160,9 +145,5 @@ namespace leaderplan {
 
 		}
 #pragma endregion
-	private: System::Void closeWindow_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		refForm::Close();
-	}
 };
 }

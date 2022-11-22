@@ -10,9 +10,6 @@ namespace leaderplan {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Сводка для formSettings
-	/// </summary>
 	public ref class formSettings : public System::Windows::Forms::Form
 	{
 	public:
@@ -20,15 +17,9 @@ namespace leaderplan {
 		{
 			InitializeComponent();
 			windowButton->Normalcolor = Color::FromArgb(14, 51, 119);
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Освободить все используемые ресурсы.
-		/// </summary>
 		~formSettings()
 		{
 			if (components)
@@ -36,54 +27,86 @@ namespace leaderplan {
 				delete components;
 			}
 		}
-	private: Bunifu::Framework::UI::BunifuElipse^ bunifuElipse1;
-	private: System::Windows::Forms::Panel^ leftPanel;
 
-	private: System::Windows::Forms::Panel^ topPanel;
+	private: 
+		System::Windows::Forms::Panel^ leftPanel;
+		System::Windows::Forms::Panel^ topPanel;
+		System::Windows::Forms::PictureBox^ closeWindow;
+		System::Windows::Forms::CheckBox^ checkBox1;
+		System::Windows::Forms::GroupBox^ windowDecoration;
+		System::Windows::Forms::RadioButton^ radioButton3;
+		System::Windows::Forms::RadioButton^ radioButton2;
+		System::Windows::Forms::RadioButton^ radioButton1;
+		System::Windows::Forms::Panel^ panel1;
+		System::Windows::Forms::Panel^ childPanel;
+		System::ComponentModel::IContainer^ components;
+		Bunifu::Framework::UI::BunifuElipse^ bunifuElipse1;
+		Bunifu::Framework::UI::BunifuCustomLabel^ formSettingsLabel;
+		Bunifu::Framework::UI::BunifuFlatButton^ windowButton;
+		Bunifu::Framework::UI::BunifuFlatButton^ fontButton;
+		Bunifu::Framework::UI::BunifuDragControl^ moveByText;
+		Bunifu::Framework::UI::BunifuDragControl^ moveByPanel;
+		Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButton3;
+		Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButton2;
+		Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButton1;
+		Bunifu::Framework::UI::BunifuCustomLabel^ bunifuCustomLabel1;
+		Bunifu::Framework::UI::BunifuCustomLabel^ bunifuCustomLabel2;
+		Bunifu::Framework::UI::BunifuCustomLabel^ bunifuCustomLabel3;
+		WindowsFormsControlLibrary1::BunifuThinButton^ bunifuThinButton2;
 
-	private: System::Windows::Forms::PictureBox^ closeWindow;
-	private: Bunifu::Framework::UI::BunifuCustomLabel^ formSettingsLabel;
-	private: Bunifu::Framework::UI::BunifuFlatButton^ windowButton;
-	private: Bunifu::Framework::UI::BunifuFlatButton^ fontButton;
+	private: System::Void closeWindow_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		formSettings::Close();
+	}
 
+	private: System::Void windowButton_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		windowButton->Normalcolor = Color::FromArgb(14, 51, 119);
+		fontButton->Normalcolor = Color::FromArgb(0, 102, 204);
 
+		closeChildForm(gcnew fontSettings());
 
-	private: Bunifu::Framework::UI::BunifuDragControl^ moveByText;
-	private: Bunifu::Framework::UI::BunifuDragControl^ moveByPanel;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::GroupBox^ windowDecoration;
+		windowDecoration->Visible = true;
+		bunifuThinButton2->Visible = true;
+	}
 
+	private: System::Void fontButton_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		fontButton->Normalcolor = Color::FromArgb(14, 51, 119);
+		windowButton->Normalcolor = Color::FromArgb(0, 102, 204);
 
-	private: System::Windows::Forms::RadioButton^ radioButton3;
-	private: Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButton3;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButton2;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButton1;
+		windowDecoration->Visible = false;
+		bunifuThinButton2->Visible = false;
 
-	private: Bunifu::Framework::UI::BunifuCustomLabel^ bunifuCustomLabel1;
-	private: Bunifu::Framework::UI::BunifuCustomLabel^ bunifuCustomLabel2;
-	private: Bunifu::Framework::UI::BunifuCustomLabel^ bunifuCustomLabel3;
-	private: WindowsFormsControlLibrary1::BunifuThinButton^ bunifuThinButton2;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Panel^ childPanel;
+		openChildForm(gcnew fontSettings());
+	}
 
+	private: Form^ activeForm = nullptr;
 
+	private: System::Void openChildForm(Form^ childForm)
+	{
+		if (activeForm != nullptr)
+			activeForm->Close();
 
-	protected:
-	private: System::ComponentModel::IContainer^ components;
+		activeForm = childForm;
+		
+		childForm->TopLevel = false;
+		childForm->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+		childForm->Dock = System::Windows::Forms::DockStyle::Fill;
+		childPanel->Controls->Add(childForm);
+		childPanel->Tag = childForm;
+		childForm->BringToFront();
+		childForm->Show();
+	}
+
+	private: System::Void closeChildForm(Form^ childForm)
+	{
+		if (activeForm = nullptr)
+			activeForm->Close();
+	}
 
 	private:
-		/// <summary>
-		/// Обязательная переменная конструктора.
-		/// </summary>
-
-
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
-		/// </summary>
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
@@ -143,7 +166,7 @@ namespace leaderplan {
 			this->fontButton->BackColor = System::Drawing::SystemColors::HotTrack;
 			this->fontButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->fontButton->BorderRadius = 0;
-			this->fontButton->ButtonText = L"                 Шрифт";
+			this->fontButton->ButtonText = L"                 пїЅпїЅпїЅпїЅпїЅ";
 			this->fontButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->fontButton->Iconcolor = System::Drawing::Color::Transparent;
 			this->fontButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"fontButton.Iconimage")));
@@ -172,7 +195,7 @@ namespace leaderplan {
 			this->windowButton->BackColor = System::Drawing::SystemColors::HotTrack;
 			this->windowButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->windowButton->BorderRadius = 0;
-			this->windowButton->ButtonText = L"                   Окно";
+			this->windowButton->ButtonText = L"                   пїЅпїЅпїЅпїЅ";
 			this->windowButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->windowButton->Iconcolor = System::Drawing::Color::Transparent;
 			this->windowButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"windowButton.Iconimage")));
@@ -216,7 +239,7 @@ namespace leaderplan {
 			this->formSettingsLabel->Name = L"formSettingsLabel";
 			this->formSettingsLabel->Size = System::Drawing::Size(139, 20);
 			this->formSettingsLabel->TabIndex = 12;
-			this->formSettingsLabel->Text = L"Параметры окна";
+			this->formSettingsLabel->Text = L"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ";
 			// 
 			// closeWindow
 			// 
@@ -257,7 +280,7 @@ namespace leaderplan {
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(260, 21);
 			this->checkBox1->TabIndex = 1;
-			this->checkBox1->Text = L"Изменение размера окна вручную";
+			this->checkBox1->Text = L"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 			this->checkBox1->UseVisualStyleBackColor = true;
 			// 
 			// windowDecoration
@@ -282,7 +305,7 @@ namespace leaderplan {
 			this->windowDecoration->Size = System::Drawing::Size(462, 215);
 			this->windowDecoration->TabIndex = 31;
 			this->windowDecoration->TabStop = false;
-			this->windowDecoration->Text = L"Выберите оформление окна:";
+			this->windowDecoration->Text = L"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:";
 			// 
 			// bunifuCustomLabel3
 			// 
@@ -394,7 +417,7 @@ namespace leaderplan {
 			// 
 			this->bunifuThinButton2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bunifuThinButton2.BackgroundImage")));
 			this->bunifuThinButton2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bunifuThinButton2->ButtonText = L"Применить";
+			this->bunifuThinButton2->ButtonText = L"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 			this->bunifuThinButton2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->bunifuThinButton2->ForeColor = System::Drawing::SystemColors::HotTrack;
 			this->bunifuThinButton2->ForeColorHoverState = System::Drawing::Color::White;
@@ -451,44 +474,5 @@ namespace leaderplan {
 
 		}
 #pragma endregion
-	private: System::Void closeWindow_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		formSettings::Close();
-	}
-private: System::Void windowButton_Click(System::Object^ sender, System::EventArgs^ e)
-{
-	windowButton->Normalcolor = Color::FromArgb(14, 51, 119);
-	fontButton->Normalcolor = Color::FromArgb(0, 102, 204);
-	closeChildForm(gcnew fontSettings());
-	windowDecoration->Visible = true;
-	bunifuThinButton2->Visible = true;
-}
-private: System::Void fontButton_Click(System::Object^ sender, System::EventArgs^ e)
-{
-	fontButton->Normalcolor = Color::FromArgb(14, 51, 119);
-	windowButton->Normalcolor = Color::FromArgb(0, 102, 204);
-	windowDecoration->Visible = false;
-	bunifuThinButton2->Visible = false;
-	openChildForm(gcnew fontSettings());
-}
-private: Form^ activeForm = nullptr;
-private: System::Void openChildForm(Form^ childForm)
-{
-	if (activeForm != nullptr)
-		activeForm->Close();
-	activeForm = childForm;
-	childForm->TopLevel = false;
-	childForm->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-	childForm->Dock = System::Windows::Forms::DockStyle::Fill;
-	childPanel->Controls->Add(childForm);
-	childPanel->Tag = childForm;
-	childForm->BringToFront();
-	childForm->Show();
-}
-private: System::Void closeChildForm(Form^ childForm)
-{
-	if (activeForm = nullptr)
-		activeForm->Close();
-}
 };
 }
